@@ -155,6 +155,33 @@
 			]
 		}
 	},
+	"styles": {
+		"elements": {
+			"button": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+				}
+			},
+			"link": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|ibm-plex-mono"
+		}
+	},
 	"templateParts": [
 		{
 			"area": "header",
