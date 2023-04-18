@@ -1,6 +1,35 @@
 {
 	"settings": {
 		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#141514",
+					"name": "Black",
+					"slug": "Black"
+				},
+				{
+					"color": "#190E4F",
+					"name": "Sea",
+					"slug": "Sea"
+				},
+				{
+					"color": "#37B2E6",
+					"name": "Sky",
+					"slug": "Sky"
+				},
+				{
+					"color": "#DB222A",
+					"name": "Red",
+					"slug": "Red"
+				},
+				{
+					"color": "#FFFBFC",
+					"name": "White",
+					"slug": "White"
+				}
+			]
+		},
 		"blocks": {
 			"core/columns": {
 				"appearanceTools": true,
@@ -486,26 +515,6 @@
 		}
 	},
 	"styles": {
-		"blocks": {
-			"core/columns": {
-				"spacing": {
-					"blockGap": {
-						"left": "0",
-						"top": "0"
-					},
-					"margin": {
-						"bottom": "0",
-						"top": "0"
-					},
-					"padding": {
-						"bottom": "0",
-						"left": "0",
-						"right": "0",
-						"top": "0"
-					}
-				}
-			}
-		},
 		"elements": {
 			"button": {
 				"typography": {
