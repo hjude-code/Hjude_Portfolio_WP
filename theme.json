@@ -1,6 +1,35 @@
 {
 	"settings": {
 		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#141514",
+					"name": "Black",
+					"slug": "Black"
+				},
+				{
+					"color": "#190E4F",
+					"name": "Sea",
+					"slug": "Sea"
+				},
+				{
+					"color": "#37B2E6",
+					"name": "Sky",
+					"slug": "Sky"
+				},
+				{
+					"color": "#DB222A",
+					"name": "Red",
+					"slug": "Red"
+				},
+				{
+					"color": "#FFFBFC",
+					"name": "White",
+					"slug": "White"
+				}
+			]
+		},
 		"layout": {
 			"contentSize": "620px",
 			"wideSize": "1000px"
@@ -156,6 +185,11 @@
 		}
 	},
 	"styles": {
+		"blocks": {
+			"core/list": {
+				"css": ".skillList{\ndisplay:flex;\nlist-style-type:none;\ngap:1rem;\nflex-wrap:wrap;\n}"
+			}
+		},
 		"elements": {
 			"button": {
 				"typography": {
