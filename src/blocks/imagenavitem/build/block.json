@@ -1,16 +1,16 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "create-block/imagenav",
+  "name": "create-block/imagenavitem",
   "version": "0.1.0",
-  "title": "Image Nav",
+  "title": "Image Nav Item",
   "category": "widgets",
-  "icon": "grid-view",
+  "icon": "admin-links",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
     "html": false
   },
-  "textdomain": "imagenav",
+  "textdomain": "imagenavitem",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
