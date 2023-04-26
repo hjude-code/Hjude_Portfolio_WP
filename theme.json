@@ -515,6 +515,9 @@
 		}
 	},
 	"styles": {
+		"blocks": {
+			
+		},
 		"elements": {
 			"button": {
 				"typography": {
@@ -539,6 +542,9 @@
 		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|ibm-plex-mono"
+		},
+		"spacing": {
+			"blockGap": "0px"
 		}
 	},
 	"templateParts": [
