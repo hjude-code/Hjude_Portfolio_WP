@@ -1,0 +1,194 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .wp-block-create-block-messageheader{
+	overflow: hidden !important;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	margin-top: 0px !important;
+
+	--red:#db222a;
+	--sky:#37b2e6;
+	--sea:#190e4f;
+	--gX:50%;
+	--gY:50%;
+
+	transition: 0.5s;
+}
+
+
+.wp-block-create-block-messageheader .messageBox{
+	position: absolute;
+	inset:0;
+	display: grid;
+	align-content:center;
+	padding:1rem;
+	transform-origin: var(--gX) var(--gY);
+	animation:txtSpin ease-in-out infinite alternate;
+	pointer-events: none !important;
+}
+.wp-block-create-block-messageheader .messageBox h3{
+	font-size:5rem;
+	margin:0px;
+	font-family:'silverknife italic';
+	line-height: 0.8;
+}
+
+.wp-block-create-block-messageheader .messageBox.m1{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 90%,
+		rgba(0,0,0,1) 90%
+	);
+	animation:none;
+}
+
+.wp-block-create-block-messageheader .messageBox.m2{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 80%,
+		rgba(0,0,0,1) 80%,
+		rgba(0,0,0,1) 90%,
+		rgba(0,0,0,0) 90%
+	);
+	animation-duration: 4s;
+}
+
+.wp-block-create-block-messageheader .messageBox.m3{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 70%,
+		rgba(0,0,0,1) 70%,
+		rgba(0,0,0,1) 80%,
+		rgba(0,0,0,0) 80%
+	);
+	animation-duration: 3.75s;
+}
+.wp-block-create-block-messageheader .messageBox.m4{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 60%,
+		rgba(0,0,0,1) 60%,
+		rgba(0,0,0,1) 70%,
+		rgba(0,0,0,0) 70%
+	);
+	animation-duration: 3.5s;
+}
+.wp-block-create-block-messageheader .messageBox.m5{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 50%,
+		rgba(0,0,0,1) 50%,
+		rgba(0,0,0,1) 60%,
+		rgba(0,0,0,0) 60%
+	);
+	animation-duration: 3.25s;
+}
+.wp-block-create-block-messageheader .messageBox.m6{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 40%,
+		rgba(0,0,0,1) 40%,
+		rgba(0,0,0,1) 50%,
+		rgba(0,0,0,0) 50%
+	);
+	animation-duration: 3s;
+}
+.wp-block-create-block-messageheader .messageBox.m7{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 30%,
+		rgba(0,0,0,1) 30%,
+		rgba(0,0,0,1) 40%,
+		rgba(0,0,0,0) 40%
+	);
+	animation-duration: 2.75s;
+}
+.wp-block-create-block-messageheader .messageBox.m8{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,0) 20%,
+		rgba(0,0,0,1) 20%,
+		rgba(0,0,0,1) 30%,
+		rgba(0,0,0,0) 30%
+	);
+	animation-duration: 2.5s;
+}
+.wp-block-create-block-messageheader .messageBox.m9{
+	mask-image: radial-gradient(
+		circle farthest-side at var(--gX) var(--gY),
+		rgba(0,0,0,1) 20%,
+		rgba(0,0,0,0) 20%
+	);
+	animation-duration: 2.25s;
+}
+
+
+.wp-block-create-block-messageheader .porthole{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inset: 3rem;
+	clip-path: circle();
+	background-color:var(--red);
+	animation:10s portColorJump steps(2, jump-none) infinite;
+	background-image: url('https://images.unsplash.com/photo-1681140348643-cfe70c047792?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1712&q=80');
+}
+
+
+
+@keyframes portColorJump {
+	from{
+		background-color: var(--sky);
+	}
+	to{
+		background-color: var(--red);
+	}
+	
+}
+
+.porthole>figure{
+	width: 100%;
+	height: 100%;
+	margin: 0px !important;
+}
+.porthole>figure img,
+.porthole>figure video{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@keyframes greetSpin {
+	from{
+		transform:translate(-50%, -50%) rotate(0deg);
+	}
+	to{
+		transform:translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes txtSpin{
+	from{
+		transform: rotate(-2deg);
+	}
+	to{
+		transform: rotate(2deg);
+	}
+}
+
+
+@media(min-width:768px){
+
+	.wp-block-create-block-messageheader .messageBox h3{
+		font-size: 7rem !important;
+		max-width: 50vw;
+	}
+
+}
