@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/messageheader",
+	"version": "0.1.0",
+	"title": "Message Header",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false,
+		"color": {
+			"text":true,
+			"background": true
+		},
+		"typography": {
+			"fontSize": true
+		},
+		"font":true
+	},
+	"attributes": {
+		"greeting":{
+			"type":"string"
+		},
+		"gradientStart":{
+			"type":"string",
+			"default":"#f00"
+		},
+		"gradientEnd":{
+			"type":"string",
+			"default":"#fff"
+		}
+	},
+	"textdomain": "messageheader",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript":"file:./view.js",
+	"render": "file:./render.php"
+}
