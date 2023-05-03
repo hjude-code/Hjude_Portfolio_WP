@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/sidebarnav",
+  "version": "0.1.0",
+  "title": "SideBarNav",
+  "category": "theme",
+  "icon": "smiley",
+  "description": "Floating side nav",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Harrison Jude"
+    }
+  },
+  "textdomain": "sidebarnav",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "script": "file:./ScrollTop.js",
+  "render": "file:./render.php"
+}

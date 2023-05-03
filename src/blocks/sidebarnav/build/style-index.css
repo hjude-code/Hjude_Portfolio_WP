@@ -1,0 +1,121 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.wp-block-create-block-sidebarnav {
+  position: fixed !important;
+  top: 0px;
+  right: 0px;
+  inset: 0;
+  margin-top: 0px !important;
+  z-index: 100;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 1rem;
+}
+
+.wp-block.wp-block-create-block-sidebarnav {
+  display: block !important;
+  position: static !important;
+  background-color: var(--wp--preset--color--black);
+  color: var(--wp--preset--color--white);
+}
+
+.wp-block-create-block-sidebarnav #navCheckbox {
+  display: none;
+}
+
+.titleInfo {
+  color: #fff;
+  text-align: right;
+  position: relative;
+  z-index: 100;
+  transform: translateX(0%);
+  transition: transform 1s ease-in-out;
+}
+
+.navScroll .titleInfo {
+  transform: translateX(110%);
+}
+
+.navScroll #navCheckbox:checked ~ .titleInfo {
+  transform: translateX(0%);
+}
+
+.titleInfo h1 {
+  font-size: 2rem;
+  margin: 0px !important;
+}
+
+.titleInfo h2 {
+  font-size: 1.25rem;
+  margin: 0px !important;
+}
+
+.wp-block-create-block-sidebarnav .navToggle {
+  display: flex;
+  padding: 0.5rem;
+  width: 3rem;
+  aspect-ratio: 1/1 !important;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 100;
+  position: relative;
+  transform: translateX(calc(100vw - 6rem)) rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.wp-block-create-block-sidebarnav.navScroll #navCheckbox:checked ~ .navToggle {
+  transform: translateX(0rem) rotate(-360deg);
+}
+
+.wp-block-create-block-sidebarnav .navLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
+}
+
+.wp-block-create-block-sidebarnav.navScroll #navCheckbox:checked ~ .navLinks {
+  transform: translateX(0%);
+}
+
+.wp-block-create-block-sidebarnav .navBack {
+  position: absolute;
+  display: block;
+  inset: 0% 0% 0% 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: inset 1s cubic-bezier(0.98, 0.3, 0.35, 0.98);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.wp-block-create-block-sidebarnav.navScroll #navCheckbox:checked ~ .navBack {
+  inset: 0% 0% 0% 0%;
+  transition: inset 1s cubic-bezier(0.43, 0.01, 0, 0.99);
+}
+
+@media (min-width: 768px) {
+  .wp-block-create-block-sidebarnav {
+    inset: 0px 0px 0px auto;
+    align-items: center;
+  }
+  .wp-block-create-block-sidebarnav .navToggle {
+    grid-row-start: 2;
+    margin-left: auto;
+    transform: translateY(0) rotate(0deg);
+  }
+  .wp-block-create-block-sidebarnav.navScroll #navCheckbox:checked ~ .navToggle {
+    transform: translateY(0) rotate(-360deg);
+  }
+  .wp-block-create-block-sidebarnav .navLinks {
+    transform: translateX(0%);
+  }
+  .wp-block-create-block-sidebarnav.navScroll .navLinks {
+    transform: translateX(100%);
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
