@@ -8,12 +8,28 @@
   "icon": "smiley",
   "description": "Floating side nav",
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true
+    }
   },
   "attributes": {
-    "name": {
+    "firstName": {
       "type": "string",
-      "default": "Harrison Jude"
+      "default": "Harrison"
+    },
+    "lastName": {
+      "type": "string",
+      "default": "Jude"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#00ff00"
+    },
+    "mainColor": {
+      "type": "string",
+      "default": "#ffffff"
     }
   },
   "textdomain": "sidebarnav",

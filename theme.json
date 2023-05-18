@@ -685,6 +685,20 @@
 					],
 					"fontFamily": "Silverknife",
 					"slug": "silverknife"
+				},
+				{
+					"fontFamily": "Silverknife VF",
+					"slug": "silverknife-vf",
+					"fontFace": [
+						{
+							"fontFamily": "Silverknife VF",
+							"fontWeight": "300 700",
+							"fontStyle": "italic",
+							"src": [
+								"file:./assets/fonts/silverknife-vf_italic_300 700.woff2"
+							]
+						}
+					]
 				}
 			],
 			"fontSizes": [],
