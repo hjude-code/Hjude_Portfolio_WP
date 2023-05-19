@@ -8,13 +8,11 @@ function add_ScrollTop(){
     0.1,
     true
 );
-
-    
-
 }
 add_action('admin_enqueue_scripts', 'add_ScrollTop');
 add_action('wp_enqueue_scripts', 'add_ScrollTop');
 add_action( 'enqueue_block_editor_assets', 'add_ScrollTop' );
+
 
 
 function register_blocks()
@@ -27,3 +25,14 @@ function register_blocks()
 }
 add_action('init', 'register_blocks');
 
+
+function loadBlockStyles(){
+
+    wp_enqueue_block_style('core/navigation', array(
+        'handle' => 'hj_block-navigation',
+        'src' => get_theme_file_uri('assets/blocks/core-navigation.css'),
+        'path' => get_theme_file_uri('assets/blocks/core-navigation.css')
+    ));
+
+}
+add_action('init', 'loadBlockStyles');

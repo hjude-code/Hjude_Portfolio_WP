@@ -33,6 +33,7 @@ S-Mobile
 	justify-content: space-between;
 	padding: 1rem 1rem 0rem 1rem;
 }
+
 #navName h1{
 	margin:0 !important;
 	font-family:'Silverknife V0.2';
@@ -61,15 +62,38 @@ S-Mobile
 	top:0em;
 	--frst:0.3s ease-in-out;
 	--scnd:0.5s ease-in-out;
+	transition: var(--scnd);
 	
 }
 
 
 @media(max-width:768px) {
+
+	#navName{
+		position: relative;
+	}
+	#navName *{
+		position: relative;;
+	}
+	.SCRL #navName{
+		padding: 1rem !important;
+	}
+	#navName::before{
+		content:'';
+		display: block;
+		position:absolute;
+		inset: 0;
+		background-color: #141514;
+		z-index:0;
+	}
+
+
+
 	.SCRL #navTagline h2{
 		top:-5em;
 		--frst:0.5s ease-in-out;
 		--scnd:0.3s ease-in-out;
+		transition: var(--frst);
 	}
 	#navTagline h2:first-child{
 		text-align: left !important;
@@ -80,6 +104,8 @@ S-Mobile
 		text-align: right !important;
 		transition:var(--frst);
 	}
+
+
 }
 
 /*====
@@ -95,6 +121,7 @@ S-768 breakpoint
 		display: flex;
 		justify-content: space-between;
 		font-size: 0.75rem;
+		align-items: center;
 		padding: 1rem 2rem !important;
 	}
 	.wp-block-create-block-sidebarnav::before{
@@ -116,6 +143,14 @@ S-768 breakpoint
 	*/
 	.navLinks{
 		display: block !important;
+		font-size: 1rem;
+	}
+	.navLinks .wp-block-navigation-item{
+		font-weight: bold;
+	}
+	.navLinks .wp-block-navigation-item:hover > a{
+		font-weight: bold;
+		font-style: italic;
 	}
 
 	/*--
@@ -138,6 +173,7 @@ S-768 breakpoint
 	}
 	.SCRL #navName{
 		transform: translateX(0em);
+		padding: 0 !important;
 	}
 	#navName h1{
 		font-size: 3em !important;

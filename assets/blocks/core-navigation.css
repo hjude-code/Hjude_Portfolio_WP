@@ -1,0 +1,26 @@
+.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content{
+    padding: 0 !important;
+}
+
+.wp-block-navigation .has-child > a{
+    cursor:default;
+}
+
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    width: auto;
+    left:-1em;
+    position: absolute;
+    padding:0.5em 1em !important;
+    white-space: nowrap;
+    clip-path: inset(0% 0% 100% 0%);
+    overflow:hidden;
+    transition:clip-path 0.15s ease-in-out;
+    gap:0.5em !important;
+}
+
+.wp-block-navigation .has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container{
+    clip-path: inset(0% 0% 0% 0%);
+}
