@@ -3,20 +3,21 @@ var __webpack_exports__ = {};
 /*!**************************!*\
   !*** ./src/ScrollTop.js ***!
   \**************************/
-window.addEventListener('load', () => {
-  const navBlock = document.querySelector('nav.wp-block-create-block-sidebarnav');
-  if (navBlock) {
-    console.log(navBlock);
-    window.addEventListener('scroll', () => {
-      console.log(window.pageYOffset);
-      if (window.pageYOffset > 10) {
-        navBlock.classList.add('navScroll');
-      } else {
-        navBlock.classList.remove('navScroll');
-      }
-    });
-  }
-});
+// let bdy;
+
+// window.addEventListener('load', ()=>{
+
+//     bdy = document.querySelector('.wp-embed-responsive');
+//     console.log(bdy);
+//     console.log(bdy.scrollTop);
+
+//     bdy.addEventListener('scroll', ()=>{
+//         console.log(5);
+//     })
+
+//     // bdy.style.display = "none";
+
+// });
 /******/ })()
 ;
 //# sourceMappingURL=ScrollTop.js.map

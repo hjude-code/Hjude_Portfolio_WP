@@ -1,6 +1,13 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
+/*====
+====
+====
+S-Mobile
+====
+====
+====*/
 .wp-block-create-block-sidebarnav {
   position: fixed !important;
   top: 0px;
@@ -8,17 +15,25 @@
   inset: 0 0 auto 0;
   margin-top: 0px !important;
   z-index: 100;
-  padding: 1rem !important;
 }
 
+/*--
+--S-Navigation menu
+--
+*/
 .navLinks {
   display: none !important;
 }
 
+/*--
+--S-Name + tagline
+--
+*/
 #navName {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 1rem 0rem 1rem;
 }
 
 #navName h1 {
@@ -26,10 +41,141 @@
   font-family: "Silverknife V0.2";
   font-style: italic;
   font-weight: 700;
+  font-size: 2rem;
 }
 
 #logoBox {
-  height: 1em !important;
+  height: 1.5em !important;
+}
+
+#navTagline {
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+#navTagline .lastName {
+  display: none;
+}
+
+#navTagline h2 {
+  margin: 0 !important;
+  font-size: 1rem;
+  position: relative;
+  top: 0em;
+  --frst:0.3s ease-in-out;
+  --scnd:0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .SCRL #navTagline h2 {
+    top: -5em;
+    --frst:0.5s ease-in-out;
+    --scnd:0.3s ease-in-out;
+  }
+  #navTagline h2:first-child {
+    text-align: left !important;
+    transition: var(--scnd);
+  }
+  #navTagline h2:last-child {
+    text-align: right !important;
+    transition: var(--frst);
+  }
+}
+/*====
+====
+====
+S-768 breakpoint
+====
+====
+====*/
+@media (min-width: 768px) {
+  .wp-block-create-block-sidebarnav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    padding: 1rem 2rem !important;
+  }
+  .wp-block-create-block-sidebarnav::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    transform: translateY(-100%);
+    background-color: #141514;
+    transition: transform 0.5s ease-in-out;
+  }
+  .SCRL .wp-block-create-block-sidebarnav::before {
+    transform: translateY(0%);
+  }
+  /*--
+  --S-Navigation menu
+  --
+  */
+  .navLinks {
+    display: block !important;
+  }
+  /*--
+  --S-Name + Tagline
+  --
+  */
+  #navInfo {
+    position: relative;
+  }
+  #navName {
+    justify-content: end;
+    gap: 0.5em !important;
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(5.25em);
+    transition: transform 0.5s ease-in-out;
+  }
+  .SCRL #navName {
+    transform: translateX(0em);
+  }
+  #navName h1 {
+    font-size: 3em !important;
+  }
+  #navName #logoBox {
+    height: 2em !important;
+  }
+  #navName .lastName {
+    transition: transform 0.25s ease-out;
+    transform: translateX(101%);
+  }
+  .SCRL #navName .lastName {
+    transform: translateX(0%);
+  }
+  #navTagline {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1.25em 1.25em;
+    -moz-column-gap: 0.5em;
+         column-gap: 0.5em;
+    padding: 0 !important;
+    position: absolute;
+    transform-origin: top left;
+    transform: translateX(100%) rotate(90deg);
+    right: 0;
+    transition: transform 0.5s ease-in-out;
+  }
+  .SCRL #navTagline {
+    transform: translateX(150%) rotate(90deg);
+  }
+  #navTagline h2 {
+    line-height: 1;
+    white-space: nowrap;
+  }
+  #navTagline .lastName {
+    display: block;
+    grid-area: 1/1/span 2/span 1;
+    margin: 0 !important;
+    font-family: "Silverknife V0.2";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 0.75em;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

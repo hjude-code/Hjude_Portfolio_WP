@@ -687,18 +687,18 @@
 					"slug": "silverknife"
 				},
 				{
-					"fontFamily": "Silverknife VF",
-					"slug": "silverknife-vf",
 					"fontFace": [
 						{
 							"fontFamily": "Silverknife VF",
-							"fontWeight": "300 700",
 							"fontStyle": "italic",
+							"fontWeight": "300 700",
 							"src": [
 								"file:./assets/fonts/silverknife-vf_italic_300 700.woff2"
 							]
 						}
-					]
+					],
+					"fontFamily": "Silverknife VF",
+					"slug": "silverknife-vf"
 				}
 			],
 			"fontSizes": [],
@@ -713,22 +713,22 @@
 		"elements": {
 			"button": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+					"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
 				}
 			},
 			"caption": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+					"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
 				}
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+					"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
 				}
 			},
 			"link": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|ibm-plex-mono"
+					"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
 				}
 			}
 		},
@@ -736,7 +736,7 @@
 			"blockGap": "0px"
 		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|ibm-plex-mono"
+			"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
 		}
 	},
 	"templateParts": [
