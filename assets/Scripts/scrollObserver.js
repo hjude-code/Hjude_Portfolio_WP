@@ -7,6 +7,4 @@ window.addEventListener('scroll', (x)=>{
     }else{
         bdy.classList.remove('SCRL');
     }
-
-    console.log(10);
 })

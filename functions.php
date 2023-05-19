@@ -22,6 +22,10 @@ function register_blocks()
     register_block_type( dirname(__FILE__) . '/src/blocks/messageHeader/build/block.json' );
     register_block_type( dirname(__FILE__) . '/src/blocks/sidebarnav/build/block.json' );
 
+    register_block_type( dirname(__FILE__) . '/src/blocks/spinWheel/build/block.json' );
+
+    add_theme_support ('align-wide');
+
 }
 add_action('init', 'register_blocks');
 
@@ -34,5 +38,12 @@ function loadBlockStyles(){
         'path' => get_theme_file_uri('assets/blocks/core-navigation.css')
     ));
 
+    wp_enqueue_block_style('core/column', array(
+        'handle' => 'hj_block-group',
+        'src' => get_theme_file_uri('assets/blocks/core-column.css'),
+        'path' => get_theme_file_uri('assets/blocks/core-column.css')
+    ));
+
 }
 add_action('init', 'loadBlockStyles');
+

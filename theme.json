@@ -707,9 +707,10 @@
 			"letterSpacing": true,
 			"textDecoration": true,
 			"textTransform": true
-		}
+		},
+		"useRootPaddingAwareAlignments": true
 	},
-	"styles": {
+	"styles":{
 		"elements": {
 			"button": {
 				"typography": {
@@ -719,6 +720,14 @@
 			"caption": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--silverknife-vf)",
+					"fontStyle": "italic",
+					"fontWeight": "900",
+					"textTransform": "none"
 				}
 			},
 			"heading": {

@@ -1,0 +1,30 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-spinwheel {
+  display: flex;
+}
+
+.wp-block-create-block-spinwheel .spinWheel {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1/1 !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.wp-block-create-block-spinwheel .spinWheel_ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

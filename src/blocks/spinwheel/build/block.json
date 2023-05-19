@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/spinwheel",
+  "version": "0.1.0",
+  "title": "Spin Wheel",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "Main_Background": {
+      "type": "string",
+      "default": "#37b2e6"
+    },
+    "Spinwheel_Color": {
+      "type": "string",
+      "default": "#190e4f"
+    },
+    "Spinwheel_Ball_Color": {
+      "type": "string",
+      "default": "#db222a"
+    }
+  },
+  "textdomain": "spinwheel",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "script": "file:./SpinLooker.js"
+}

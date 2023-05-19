@@ -1,0 +1,10 @@
+.wp-block-column.floatPlane{
+    position: sticky;
+    top:4rem !important;
+}
+
+@media(min-width:768px){
+    .wp-block-column.floatPlane{
+        max-height: calc(100vh - 8rem);
+    }
+}
