@@ -748,6 +748,7 @@
 				"css": "max-width:600px;\nhyphens:auto;\ntext-align:justify;"
 			}
 		},
+		"css": "@media(max-width:768px){\n\n.hide-m{\n\ndisplay:none !important;\n\n}\n\n}\n\n@media(min-width:768px){\n\n.hide-d{\n\ndisplay:none !important;\n\n}\n\n}",
 		"elements": {
 			"button": {
 				"typography": {
@@ -762,8 +763,10 @@
 			"h1": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--silverknife-vf)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontStyle": "italic",
 					"fontWeight": "900",
+					"lineHeight": "1",
 					"textTransform": "none"
 				}
 			},
@@ -782,7 +785,8 @@
 			"blockGap": "0px"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
+			"fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)",
+			"fontSize": "var(--wp--preset--font-size--small)"
 		}
 	},
 	"templateParts": [
