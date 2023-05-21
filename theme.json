@@ -371,7 +371,7 @@
 			"text": true
 		},
 		"layout": {
-			"contentSize": "620px",
+			"contentSize": "1200px",
 			"definitions": {
 				"constrained": {
 					"baseStyles": [
