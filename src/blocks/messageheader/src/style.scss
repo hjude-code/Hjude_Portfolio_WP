@@ -134,11 +134,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	inset: 3rem;
-	clip-path: circle();
+	inset: 3rem 0em 0 0em;
+	clip-path: circle(60% at 50% 65%);
 	background-color:var(--red);
 	animation:10s portColorJump steps(2, jump-none) infinite;
-	background-image: url('https://images.unsplash.com/photo-1681140348643-cfe70c047792?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1712&q=80');
+	
 }
 
 
@@ -190,5 +190,11 @@
 		font-size: 7rem !important;
 		max-width: 50vw;
 	}
+
+	.wp-block-create-block-messageheader .porthole{
+		inset: 3rem;
+		clip-path: circle();
+	}
+	
 
 }
