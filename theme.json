@@ -550,6 +550,10 @@
 		"typography": {
 			"customFontSize": true,
 			"dropCap": true,
+			"fluid": {
+				"max": "1200px",
+				"min": "768px"
+			},
 			"fontFamilies": [
 				{
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
@@ -701,7 +705,35 @@
 					"slug": "silverknife-vf"
 				}
 			],
-			"fontSizes": [],
+			"fontSizes": [
+				{
+					"fluidSize": {
+						"max": "1.25rem",
+						"min": "0.75rem"
+					},
+					"name": "Small",
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"fluidSize": {
+						"max": "2.5rem",
+						"min": "1.8rem"
+					},
+					"name": "Large",
+					"size": "2rem",
+					"slug": "large"
+				},
+				{
+					"fluidSize": {
+						"max": "3.5rem",
+						"min": "2.5rem"
+					},
+					"name": "Medium",
+					"size": "3rem",
+					"slug": "medium"
+				}
+			],
 			"fontStyle": true,
 			"fontWeight": true,
 			"letterSpacing": true,
@@ -710,7 +742,12 @@
 		},
 		"useRootPaddingAwareAlignments": true
 	},
-	"styles":{
+	"styles": {
+		"blocks": {
+			"core/paragraph": {
+				"css": "max-width:600px;\nhyphens:auto;\ntext-align:justify;"
+			}
+		},
 		"elements": {
 			"button": {
 				"typography": {

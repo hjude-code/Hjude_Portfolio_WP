@@ -39,11 +39,17 @@ function loadBlockStyles(){
     ));
 
     wp_enqueue_block_style('core/column', array(
-        'handle' => 'hj_block-group',
+        'handle' => 'hj_block-column',
         'src' => get_theme_file_uri('assets/blocks/core-column.css'),
         'path' => get_theme_file_uri('assets/blocks/core-column.css')
     ));
 
+    wp_enqueue_block_style('core/group', array(
+        'handle' => 'hj_block-group',
+        'src' => get_theme_file_uri('assets/blocks/core-group.css'),
+        'path' => get_theme_file_uri('assets/blocks/core-group.css')
+    ));
+    
 }
 add_action('init', 'loadBlockStyles');
 

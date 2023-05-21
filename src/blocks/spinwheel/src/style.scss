@@ -8,22 +8,26 @@
 .wp-block-create-block-spinwheel {
 	// background-color: #be6;
 	display: flex;
+	justify-content:flex-end;
+	padding: 1em !important;
 }
 
 .wp-block-create-block-spinwheel .spinWheel{
-	width:100px;
-	height: 100px;
+	--wheelSize:20vh;
+	width:var(--wheelSize);
+	height:var(--wheelSize);
 	aspect-ratio: 1 / 1 !important;
 	border-radius: 50%;
 	display:flex;
 	align-items: center;
-	justify-content: end;
+	justify-content:flex-end;
 }
 
 
 .wp-block-create-block-spinwheel .spinWheel_ball{
-	width:20px;
-	height: 20px;
+	--ballSize:25%;
+	width:var(--ballSize);
+	height:var(--ballSize);
 	border-radius: 50%;
 
 }

@@ -1,0 +1,23 @@
+/*====
+====
+====
+S-Landing Intro
+====
+====
+====*/
+
+/*--
+--S-Landing Intro Mobile
+--
+*/
+.wp-block-group.Landing-Intro{
+    padding:0 1em !important;
+}
+.wp-block-group.Landing-Intro h2{
+    text-align: right;
+}
+.wp-block-group.Landing-Intro .wp-block-create-block-spinwheel{
+    position: relative;
+    left: -1em;
+    margin-right: 10vw;
+}
