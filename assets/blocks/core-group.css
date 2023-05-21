@@ -11,13 +11,45 @@ S-Landing Intro
 --
 */
 .wp-block-group.Landing-Intro{
-    padding:0 1em !important;
+    padding:0 2em !important;
 }
 .wp-block-group.Landing-Intro h2{
     text-align: right;
 }
 .wp-block-group.Landing-Intro .wp-block-create-block-spinwheel{
     position: relative;
-    left: -1em;
+    left: -2em;
     margin-right: 10vw;
+}
+
+/*--
+--S-Landing Intro Desktop
+--
+*/
+@media(min-width:768px){
+    .wp-block-group.Landing-Intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap:1em;
+        padding: 0 !important;
+    }
+
+    .wp-block-group.Landing-Intro h2{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        justify-self: end;
+        position: relative;
+        left: 2em !important;
+    }
+
+    .wp-block-group.Landing-Intro .introText{
+       grid-area: 2/3/span 1/span 2;
+
+    }
+
+    .wp-block-group.Landing-Intro .wp-block-create-block-spinwheel{
+        grid-area: 2/1/span 1/span 2;
+        margin: 0 !important;
+        left: 0;
+    }
 }

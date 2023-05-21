@@ -32,6 +32,12 @@ add_action('init', 'register_blocks');
 
 function loadBlockStyles(){
 
+    wp_enqueue_block_style('universal', array(
+        'handle' => 'hj_uinversal',
+        'src' => get_theme_file_uri('style.css'),
+        'path' => get_theme_file_uri('stlye.css')
+    ));
+
     wp_enqueue_block_style('core/navigation', array(
         'handle' => 'hj_block-navigation',
         'src' => get_theme_file_uri('assets/blocks/core-navigation.css'),

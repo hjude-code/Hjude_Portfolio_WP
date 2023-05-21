@@ -708,7 +708,7 @@
 			"fontSizes": [
 				{
 					"fluidSize": {
-						"max": "1.25rem",
+						"max": "1rem",
 						"min": "0.75rem"
 					},
 					"name": "Small",
@@ -717,20 +717,20 @@
 				},
 				{
 					"fluidSize": {
-						"max": "2.5rem",
-						"min": "1.8rem"
+						"max": "3rem",
+						"min": "2.75rem"
 					},
 					"name": "Large",
-					"size": "2rem",
+					"size": "2.75rem",
 					"slug": "large"
 				},
 				{
 					"fluidSize": {
-						"max": "3.5rem",
-						"min": "2.5rem"
+						"max": "7rem",
+						"min": "5rem"
 					},
 					"name": "Medium",
-					"size": "3rem",
+					"size": "6rem",
 					"slug": "medium"
 				}
 			],

@@ -70,7 +70,7 @@ export default function Edit(props) {
 	console.log({BackgroundColoring})
 
 	return (
-		<div>
+		<div class="wp-block-create-block-spinwheel" {...BackgroundColoring}>
 
 			<InspectorControls>
 				<PanelBody
@@ -111,11 +111,8 @@ export default function Edit(props) {
 			</InspectorControls>
 
 
-
-			<div class="wp-block-create-block-spinwheel" {...BackgroundColoring}>
-				<div {...SpinwheelColoring} class="spinWheel">
-					<div {...SpinwheelBallColoring} class='spinWheel_ball'></div>
-				</div>
+			<div {...SpinwheelColoring} class="spinWheel">
+				<div {...SpinwheelBallColoring} class='spinWheel_ball'></div>
 			</div>
 
 		</div>
