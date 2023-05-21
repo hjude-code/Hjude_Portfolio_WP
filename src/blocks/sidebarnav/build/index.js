@@ -64,12 +64,12 @@ const NavTemplate = [['core/navigation', {
   overlayTextColor: 'white',
   layout: {
     type: 'flex',
-    orientation: 'vertical',
-    justifyContent: 'right'
+    orientation: 'horizontal',
+    justifyContent: 'left'
   },
   style: {
     'spacing': {
-      blockgap: '0'
+      blockGap: '1em'
     }
   }
 }]];
@@ -339,7 +339,7 @@ function _extends() {
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/sidebarnav","version":"0.1.0","title":"SideBarNav","category":"theme","icon":"smiley","description":"Floating side nav","supports":{"html":false,"color":{"text":true,"background":true}},"attributes":{"firstName":{"type":"string","default":"Harrison"},"lastName":{"type":"string","default":"Jude"},"accentColor":{"type":"string","default":"#00ff00"},"mainColor":{"type":"string","default":"#ffffff"}},"textdomain":"sidebarnav","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./ScrollTop.js","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/sidebarnav","version":"0.1.0","title":"SideBarNav","category":"theme","icon":"smiley","description":"Floating side nav","supports":{"html":false,"color":{"text":true,"background":true}},"attributes":{"firstName":{"type":"string","default":"Harrison"},"lastName":{"type":"string","default":"Jude"},"accentColor":{"type":"string","default":"#db222a"},"mainColor":{"type":"string","default":"#ffffff"}},"textdomain":"sidebarnav","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./ScrollTop.js","render":"file:./render.php"}');
 
 /***/ })
 

@@ -47,12 +47,12 @@ const NavTemplate = [
 		overlayTextColor:'white',
 		layout:{
 			type:'flex',
-			orientation:'vertical',
-			justifyContent:'right'
+			orientation:'horizontal',
+			justifyContent:'left'
 		},
 		style:{
 			'spacing':{
-				blockgap:'0'
+				blockGap:'1em'
 			}
 		}
 	}]
