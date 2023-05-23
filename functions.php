@@ -53,3 +53,10 @@ function loadBlockStyles(){
 }
 add_action('init', 'loadBlockStyles');
 
+function loadHTMLElementStyles(){
+
+    wp_enqueue_style( 'html-input-text.css', get_theme_file_uri() . '/assets/elements/html-input-text.css');
+
+}
+
+add_action('wp_enqueue_scripts', 'loadHTMLElementStyles');
