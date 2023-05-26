@@ -30,7 +30,7 @@
 	pointer-events: none !important;
 }
 .wp-block-create-block-messageheader .messageBox h3{
-	font-size:5rem;
+	font-size:inherit;
 	margin:0px;
 	font-family:'silverknife italic';
 	line-height: 0.8;
@@ -164,7 +164,6 @@
 @media(min-width:768px){
 
 	.wp-block-create-block-messageheader .messageBox h3{
-		font-size: 7rem !important;
 		max-width: 50vw;
 	}
 
