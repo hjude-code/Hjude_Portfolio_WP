@@ -59,9 +59,7 @@ const portholeTemplate = [['core/image', {}]];
 function Edit(props) {
   const {
     attributes: {
-      greeting,
-      gradientStart,
-      gradientEnd
+      greeting
     },
     setAttributes,
     className
@@ -69,24 +67,6 @@ function Edit(props) {
   const onChangeGreeting = newContent => {
     setAttributes({
       greeting: newContent
-    });
-  };
-  const gradient = `conic-gradient(from 0.0turn at 50% 50%, ${gradientStart},${gradientEnd})`;
-  const gradientBackground = {
-    backgroundColor: '#090',
-    background: gradient
-  };
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-    style: gradientBackground
-  });
-  const onChangeGStart = newContent => {
-    setAttributes({
-      gradientStart: newContent
-    });
-  };
-  const onChangeGEnd = newContent => {
-    setAttributes({
-      gradientEnd: newContent
     });
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
@@ -97,16 +77,6 @@ function Edit(props) {
     value: greeting,
     help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default Greeting to be displayed around the ring'),
     onChange: onChangeGreeting
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPicker, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Gradient Start', 'basic-block'),
-    value: gradientStart,
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default Greeting to be displayed around the ring'),
-    onChange: onChangeGStart
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPicker, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Gradient End', 'basic-block'),
-    value: gradientEnd,
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default Greeting to be displayed around the ring'),
-    onChange: onChangeGEnd
   }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     class: "porthole"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
@@ -287,7 +257,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/messageheader","version":"0.1.0","title":"Message Header","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"color":{"text":true,"background":true},"typography":{"fontSize":true},"font":true},"attributes":{"greeting":{"type":"string"},"gradientStart":{"type":"string","default":"#f00"},"gradientEnd":{"type":"string","default":"#fff"}},"textdomain":"messageheader","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/messageheader","version":"0.1.0","title":"Message Header","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"color":{"text":true,"background":true},"typography":{"fontSize":true},"font":true},"attributes":{"greeting":{"type":"string"}},"textdomain":"messageheader","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","render":"file:./render.php"}');
 
 /***/ })
 

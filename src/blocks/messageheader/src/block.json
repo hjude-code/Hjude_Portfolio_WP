@@ -21,14 +21,6 @@
 	"attributes": {
 		"greeting":{
 			"type":"string"
-		},
-		"gradientStart":{
-			"type":"string",
-			"default":"#f00"
-		},
-		"gradientEnd":{
-			"type":"string",
-			"default":"#fff"
 		}
 	},
 	"textdomain": "messageheader",

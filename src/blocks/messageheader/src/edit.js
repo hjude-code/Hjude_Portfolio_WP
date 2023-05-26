@@ -45,26 +45,12 @@ export default function Edit(props) {
 
 
 	const {
-		attributes: { greeting, gradientStart, gradientEnd},
+		attributes: { greeting },
 		setAttributes,
 		className,
 	} = props;
 	const onChangeGreeting = ( newContent ) => {
 		setAttributes( { greeting: newContent } );
-	};
-
-	const gradient = `conic-gradient(from 0.0turn at 50% 50%, ${gradientStart},${gradientEnd})`
-
-	const gradientBackground = {
-		backgroundColor: '#090',
-		background:gradient,
-	};
-	const blockProps = useBlockProps( { style: gradientBackground } );
-	const onChangeGStart = ( newContent ) => {
-		setAttributes( { gradientStart: newContent } );
-	};
-	const onChangeGEnd = ( newContent ) => {
-		setAttributes( { gradientEnd: newContent } );
 	};
 
 	return (
@@ -87,34 +73,6 @@ export default function Edit(props) {
 						/>
 						</fieldset>
 				</PanelRow>
-				<PanelRow>
-					<fieldset>
-						<ColorPicker
-							label={ __( 'Gradient Start', 'basic-block' ) }
-							value={ gradientStart }
-							help={ __(
-								'Default Greeting to be displayed around the ring'
-							) }
-							onChange={ onChangeGStart}
-				
-						/>
-						</fieldset>
-				</PanelRow>
-				<PanelRow>
-					<fieldset>
-						<ColorPicker
-							label={ __( 'Gradient End', 'basic-block' ) }
-							value={ gradientEnd }
-							help={ __(
-								'Default Greeting to be displayed around the ring'
-							) }
-							onChange={ onChangeGEnd }
-				
-						/>
-						</fieldset>
-				</PanelRow>
-
-
 			</PanelBody>
 		</InspectorControls>
 

@@ -12,9 +12,6 @@
 	position: relative;
 	margin-top: 0px !important;
 
-	--red:#db222a;
-	--sky:#37b2e6;
-	--sea:#190e4f;
 	--gX:50%;
 	--gY:50%;
 
@@ -136,22 +133,11 @@
 	justify-content: center;
 	inset: 3rem 0em 0 0em;
 	clip-path: circle(60% at 50% 65%);
-	background-color:var(--red);
-	animation:10s portColorJump steps(2, jump-none) infinite;
-	
+	background-color: red;
 }
 
 
 
-@keyframes portColorJump {
-	from{
-		background-color: var(--sky);
-	}
-	to{
-		background-color: var(--red);
-	}
-	
-}
 
 .porthole>figure{
 	width: 100%;
@@ -163,15 +149,6 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-
-@keyframes greetSpin {
-	from{
-		transform:translate(-50%, -50%) rotate(0deg);
-	}
-	to{
-		transform:translate(-50%, -50%) rotate(360deg);
-	}
 }
 
 @keyframes txtSpin{
