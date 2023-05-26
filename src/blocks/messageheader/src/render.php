@@ -4,8 +4,6 @@
   } else {
     $message = $attributes['greeting'];
   }
-
-  $gradient = "conic-gradient(from 0.0turn at 50% 50%, {$attributes['gradientStart']}, {$attributes['gradientEnd']})"
 ?>
 
 <div <?php echo get_block_wrapper_attributes(); ?>>
@@ -13,7 +11,7 @@
  
 
   	<div class="porthole">
-		<div style="background:<?php echo $gradient ?>;">
+		<div>
 		</div>
 		<?php echo $content ?>
 	</div>
