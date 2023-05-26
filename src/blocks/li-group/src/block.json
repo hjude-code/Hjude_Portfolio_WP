@@ -10,6 +10,16 @@
 	"supports": {
 		"html": false
 	},
+	"attributes": {
+		"Handle":{
+			"type":"string",
+			"default":"hjude_"
+		},
+		"Platform":{
+			"type":"string",
+			"default":"media"
+		}
+	},
 	"textdomain": "li-group",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
