@@ -35,11 +35,12 @@ S-Landing Intro
     }
 
     .wp-block-group.Landing-Intro h2{
-        grid-column-start: 2;
+        grid-column: 1 / span 2 !important;
         grid-row-start: 1;
         justify-self: end;
         position: relative;
         left: 2em !important;
+        width: 100%;
     }
 
     .wp-block-group.Landing-Intro .introText{
