@@ -10,6 +10,12 @@
   "supports": {
     "html": false
   },
+  "attributes": {
+    "Skills": {
+      "type": "string",
+      "default": "Motion Design, Creative Coding"
+    }
+  },
   "textdomain": "skills",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
