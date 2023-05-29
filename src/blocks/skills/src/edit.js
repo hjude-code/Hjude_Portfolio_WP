@@ -11,7 +11,12 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls  } from '@wordpress/block-editor';
+import { TextareaControl,
+		PanelBody,
+		PanelRow, } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,10 +34,58 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit(props) {
+
+	const {
+		attributes: {Skills},
+		setAttributes,
+		className,
+	} = props;
+
+
+
+
+	const parseString = (Str) =>{
+	
+		 const lst = Str.split(', ');
+		 const lst_HTML = [];
+		 return lst.map((item, index) => <li className={`skill-${index}`}>{item}</li>);
+
+	}
+
+	const SkillsList = parseString(Skills);
+
+	const onSkillsChange = ( newContent ) => {
+		setAttributes( { Skills: newContent } );
+	};
+
+	console.log(SkillsList);
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Skills – hello from the editor!', 'skills' ) }
-		</p>
+		<div{ ...useBlockProps() }>
+
+		<InspectorControls>
+			<PanelBody
+				title={ __( 'Settings', 'basic-block' ) }
+				initialOpen={ true }
+			>
+				<PanelRow>
+
+					<TextareaControl
+						label="Skills"
+						help="Enter Skills Sepparated by ', '"
+						value={ Skills }
+						onChange={ onSkillsChange}
+        			/>
+
+				</PanelRow>
+			</PanelBody>
+		</InspectorControls>
+
+		<ul>
+			{SkillsList}
+		</ul>
+			
+		</div>
 	);
 }

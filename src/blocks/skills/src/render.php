@@ -1,8 +1,16 @@
 <?php
-/**
- * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
- */
+
+$SkillsList = explode(', ',$attributes['Skills']);
+
+
+
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'Skills – hello from a dynamic block!', 'skills' ); ?>
-</p>
+<div <?php echo get_block_wrapper_attributes(); ?>>
+
+	<ul>
+	<?php foreach($SkillsList as $index => $item){
+		echo "<li class=`skill-$index`>$item</li>";
+	} ?>
+	</ul>
+
+</div>
