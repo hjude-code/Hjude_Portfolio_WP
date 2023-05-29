@@ -6,7 +6,30 @@
  */
 
 .wp-block-create-block-skills {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	overflow: hidden;
+}
+
+.wp-block-create-block-skills ul{
+	display: flex;
+	list-style: none !important;
+	justify-content: center;
+	padding: 0rem !important;
+	margin: 1rem !important;
+	gap:1em !important;
+	width: 100%;
+}
+
+.wp-block-create-block-skills li{
+	font-weight: 100;
+	flex-grow: 1;
+	transition:  0.5s cubic-bezier(.74,.04,.53,.98);
+	cursor: pointer;
+	font-family:'silverknife italic';
+	white-space: nowrap;
+	color:rgb(0,0,0) !important
+}
+.wp-block-create-block-skills li.selectedSkill{
+	font-weight: 700;
+	transition: 0.5s cubic-bezier(.35,.08,0,1);
+	color:rgb(255,0,0) !important
 }

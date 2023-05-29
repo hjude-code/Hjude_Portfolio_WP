@@ -59,8 +59,6 @@ export default function Edit(props) {
 		setAttributes( { Skills: newContent } );
 	};
 
-	console.log(SkillsList);
-
 	return (
 		<div{ ...useBlockProps() }>
 

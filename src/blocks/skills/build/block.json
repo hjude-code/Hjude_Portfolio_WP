@@ -8,7 +8,15 @@
   "icon": "smiley",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
-    "html": false
+    "html": true,
+    "typography": {
+      "fontSize": true,
+      "family": true,
+      "appearance": true
+    },
+    "color": {
+      "text": true
+    }
   },
   "attributes": {
     "Skills": {
@@ -20,5 +28,6 @@
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "render": "file:./render.php"
+  "render": "file:./render.php",
+  "viewScript": "file:./script.js"
 }
