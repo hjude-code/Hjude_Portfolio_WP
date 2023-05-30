@@ -39,11 +39,48 @@ import './editor.scss';
 export default function Edit(props) {
 
 	const {
-		attributes:{Handle, Platform}
+		attributes:{Handle, Platform},
+		setAttributes,
+		className,
 	} = props
+
+	const onChangeHandle = (newContent) =>{
+		setAttributes( { Handle: newContent } );
+	}
+	const onChangePlatform = (newContent) =>{
+		setAttributes( { Platform: newContent } );
+	}
+
 
 	return (
 		<div { ...useBlockProps() }>
+
+			<InspectorControls>
+				<PanelBody>
+					<PanelRow>
+						<TextControl
+							label={ __( 'Social Handle', 'basic-block' ) }
+							value={ Handle }
+							help={ __(
+								'Social media handle including @ if applicable'
+							) }
+							onChange={onChangeHandle}
+						/>
+					</PanelRow>	
+					<PanelRow>
+						<TextControl
+							label={ __( 'Platform', 'basic-block' ) }
+							value={ Platform }
+							help={ __(
+								'Social media platform for handle'
+							) }
+							onChange={onChangePlatform}
+						/>
+					</PanelRow>
+				</PanelBody>
+			</InspectorControls>
+
+
 			<p>{Handle}</p>
 			<p><span>on</span>{Platform}</p>
 		</div>
