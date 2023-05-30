@@ -36,10 +36,16 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit(props) {
+
+	const {
+		attributes:{Handle, Platform}
+	} = props
+
 	return (
 		<div { ...useBlockProps() }>
-			<InnerBlocks />
+			<p>{Handle}</p>
+			<p><span>on</span>{Platform}</p>
 		</div>
 	);
 }
