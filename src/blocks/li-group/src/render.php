@@ -1,8 +1,10 @@
 <?php
-/**
- * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
- */
+
+$accent = $attributes['Accent'];
+
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'Li Group – hello from a dynamic block!', 'li-group' ); ?>
-</p>
+<div <?php echo get_block_wrapper_attributes(); ?>>
+	<p><?php echo $attributes['Handle'] ?></p>
+	<p><span style="color:<?php echo $accent ?>">on</span><?php echo $attributes['Platform'] ?></p>
+</div>
+

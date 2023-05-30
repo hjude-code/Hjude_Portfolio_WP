@@ -58,11 +58,16 @@ export default function Edit(props) {
 	}
 	const AccentColoring = {style: AccentColor}
 
+	let BorderAccentColor = {
+		borderLeftColor:Accent
+	}
+	const BorderColoring = {style:BorderAccentColor}
+
 
 
 
 	return (
-		<div { ...useBlockProps() }>
+		<div { ...useBlockProps({style:BorderAccentColor}) }>
 
 			<InspectorControls>
 				<PanelBody>
