@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InspectorControls  } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, InnerBlocks} from '@wordpress/block-editor';
 import { TextareaControl,
 		PanelBody,
 		PanelRow, } from '@wordpress/components';
@@ -83,7 +83,9 @@ export default function Edit(props) {
 		<ul>
 			{SkillsList}
 		</ul>
-			
+		
+		<InnerBlocks/>
+
 		</div>
 	);
 }

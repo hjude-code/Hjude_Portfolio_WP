@@ -9,6 +9,7 @@
  */
 .wp-block-create-block-skills {
   overflow: hidden;
+  position: relative;
 }
 
 .wp-block-create-block-skills ul {
@@ -35,6 +36,12 @@
   font-weight: 700;
   transition: 0.5s cubic-bezier(0.35, 0.08, 0, 1);
   color: rgb(255, 0, 0) !important;
+}
+
+.wp-block-create-block-skills aside {
+  border: 1px solid teal;
+  position: absolute;
+  inset: 0 20vw;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

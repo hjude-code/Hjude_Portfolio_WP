@@ -21,4 +21,6 @@ function printList($list){
 	}
 	?>
 
+	<?php echo $content?>
+
 </div>
