@@ -58,7 +58,8 @@ function Edit(props) {
   const {
     attributes: {
       Handle,
-      Platform
+      Platform,
+      Accent
     },
     setAttributes,
     className
@@ -73,6 +74,17 @@ function Edit(props) {
       Platform: newContent
     });
   };
+  const onChangeAccent = newContent => {
+    setAttributes({
+      Accent: newContent
+    });
+  };
+  let AccentColor = {
+    color: Accent
+  };
+  const AccentColoring = {
+    style: AccentColor
+  };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Social Handle', 'basic-block'),
     value: Handle,
@@ -83,7 +95,16 @@ function Edit(props) {
     value: Platform,
     help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Social media platform for handle'),
     onChange: onChangePlatform
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, Handle), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "on"), Platform));
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPicker, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Accent Block', 'basic-block'),
+    value: Accent,
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Accent color'),
+    onChange: onChangeAccent
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    class: "handle"
+  }, Handle), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    class: "platform"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", AccentColoring, "on"), Platform));
 }
 
 /***/ }),
@@ -216,7 +237,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/li-group","version":"0.1.0","title":"Li Group","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"Handle":{"type":"string","default":"hjude_"},"Platform":{"type":"string","default":"media"}},"textdomain":"li-group","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/li-group","version":"0.1.0","title":"Li Group","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"Handle":{"type":"string","default":"hjude_"},"Platform":{"type":"string","default":"media"},"Accent":{"type":"string","default":"#ff00ff"}},"styles":[],"textdomain":"li-group","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

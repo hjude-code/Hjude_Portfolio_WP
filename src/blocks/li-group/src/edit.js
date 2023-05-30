@@ -39,7 +39,7 @@ import './editor.scss';
 export default function Edit(props) {
 
 	const {
-		attributes:{Handle, Platform},
+		attributes:{Handle, Platform, Accent},
 		setAttributes,
 		className,
 	} = props
@@ -50,6 +50,15 @@ export default function Edit(props) {
 	const onChangePlatform = (newContent) =>{
 		setAttributes( { Platform: newContent } );
 	}
+	const onChangeAccent= (newContent) =>{
+		setAttributes( { Accent: newContent } );
+	}
+	let AccentColor = {
+		color:Accent
+	}
+	const AccentColoring = {style: AccentColor}
+
+
 
 
 	return (
@@ -77,12 +86,22 @@ export default function Edit(props) {
 							onChange={onChangePlatform}
 						/>
 					</PanelRow>
+					<PanelRow>
+						<ColorPicker
+							label={ __( 'Accent Block', 'basic-block' ) }
+							value={Accent}
+							help={ __(
+								'Accent color'
+							) }
+							onChange={onChangeAccent}
+						/>
+					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
 
 
-			<p>{Handle}</p>
-			<p><span>on</span>{Platform}</p>
+			<p class="handle">{Handle}</p>
+			<p class="platform"><span {...AccentColoring}>on</span>{Platform}</p>
 		</div>
 	);
 }

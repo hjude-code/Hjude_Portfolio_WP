@@ -6,7 +6,23 @@
  */
 
 .wp-block-create-block-li-group {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	color: #000;
+	padding:0.25em 0.5em;
+	border-left: 0.5rem !important;
+	border-left-style: solid !important;
+	border-left-color: red !important;
+}
+
+.wp-block-create-block-li-group p{
+	margin: 0;
+}
+
+.wp-block-create-block-li-group .platform{
+	font-size: 0.8em;
+
+}
+.wp-block-create-block-li-group .handle{
+	font-size: 1em;
+	font-weight: 700;
+	font-style: italic;
 }
