@@ -36,7 +36,20 @@
 }
 
 .wp-block-create-block-skills aside{
-	border: 1px solid teal;
-	position: absolute;
-	inset: 0 20vw;
+	display:none;
+}
+
+@media(min-width:768px){
+
+	.wp-block-create-block-skills aside{
+		display:block;
+		position: absolute;
+		width:300px;
+		right: 25vw;
+		top:0;
+		bottom: 0;
+		overflow: scroll;
+		
+	}
+
 }
