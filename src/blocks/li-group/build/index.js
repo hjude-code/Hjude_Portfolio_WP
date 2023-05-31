@@ -86,10 +86,9 @@ function Edit(props) {
     style: AccentColor
   };
   let BorderAccentColor = {
-    borderLeftColor: Accent
-  };
-  const BorderColoring = {
-    style: BorderAccentColor
+    borderLeftColor: Accent,
+    borderStyle: 'solid',
+    borderLeftWidth: '0.5em'
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     style: BorderAccentColor

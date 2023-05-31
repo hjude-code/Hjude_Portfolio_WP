@@ -59,9 +59,10 @@ export default function Edit(props) {
 	const AccentColoring = {style: AccentColor}
 
 	let BorderAccentColor = {
-		borderLeftColor:Accent
+		borderLeftColor:Accent,
+		borderStyle:'solid',
+		borderLeftWidth:'0.5em'
 	}
-	const BorderColoring = {style:BorderAccentColor}
 
 
 
