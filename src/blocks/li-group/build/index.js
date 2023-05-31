@@ -244,7 +244,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/li-group","version":"0.1.0","title":"Li Group","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"Handle":{"type":"string","default":"hjude_"},"Platform":{"type":"string","default":"media"},"Accent":{"type":"string","default":"#ff00ff"}},"textdomain":"li-group","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/li-group","version":"0.1.0","title":"Li Group","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"typography":{"fontSize":true},"color":{"text":true,"background":false}},"attributes":{"Handle":{"type":"string","default":"hjude_"},"Platform":{"type":"string","default":"media"},"Accent":{"type":"string","default":"#ff00ff"}},"textdomain":"li-group","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
