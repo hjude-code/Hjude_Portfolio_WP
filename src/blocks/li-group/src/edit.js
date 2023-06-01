@@ -73,7 +73,7 @@ export default function Edit(props) {
 
 
 	return (
-		<a { ...useBlockProps({style:BorderAccentColor, href:Link}) }>
+		<a { ...useBlockProps({style:BorderAccentColor}) }>
 
 			<InspectorControls>
 				<PanelBody>
