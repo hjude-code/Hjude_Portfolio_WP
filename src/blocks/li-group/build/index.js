@@ -59,7 +59,8 @@ function Edit(props) {
     attributes: {
       Handle,
       Platform,
-      Accent
+      Accent,
+      Link
     },
     setAttributes,
     className
@@ -79,6 +80,11 @@ function Edit(props) {
       Accent: newContent
     });
   };
+  const onChangeLink = newContent => {
+    setAttributes({
+      Link: newContent
+    });
+  };
   let AccentColor = {
     color: Accent
   };
@@ -90,8 +96,9 @@ function Edit(props) {
     borderStyle: 'solid',
     borderLeftWidth: '0.5em'
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-    style: BorderAccentColor
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    style: BorderAccentColor,
+    href: Link
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Social Handle', 'basic-block'),
     value: Handle,
@@ -102,6 +109,11 @@ function Edit(props) {
     value: Platform,
     help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Social media platform for handle'),
     onChange: onChangePlatform
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Link', 'basic-block'),
+    value: Link,
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Link to social channel'),
+    onChange: onChangeLink
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPicker, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Accent Block', 'basic-block'),
     value: Accent,
@@ -244,7 +256,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/li-group","version":"0.1.0","title":"Li Group","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"typography":{"fontSize":true},"color":{"text":true,"background":false}},"attributes":{"Handle":{"type":"string","default":"hjude_"},"Platform":{"type":"string","default":"media"},"Accent":{"type":"string","default":"#ff00ff"}},"textdomain":"li-group","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/li-group","version":"0.1.0","title":"Li Group","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"typography":{"fontSize":true},"color":{"text":true,"background":false}},"attributes":{"Handle":{"type":"string","default":"hjude_"},"Platform":{"type":"string","default":"media"},"Accent":{"type":"string","default":"#ff00ff"},"Link":{"type":"string","default":"#"}},"textdomain":"li-group","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

@@ -29,6 +29,10 @@
     "Accent": {
       "type": "string",
       "default": "#ff00ff"
+    },
+    "Link": {
+      "type": "string",
+      "default": "#"
     }
   },
   "textdomain": "li-group",

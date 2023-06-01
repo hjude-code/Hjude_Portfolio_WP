@@ -39,7 +39,7 @@ import './editor.scss';
 export default function Edit(props) {
 
 	const {
-		attributes:{Handle, Platform, Accent},
+		attributes:{Handle, Platform, Accent, Link},
 		setAttributes,
 		className,
 	} = props
@@ -53,6 +53,11 @@ export default function Edit(props) {
 	const onChangeAccent= (newContent) =>{
 		setAttributes( { Accent: newContent } );
 	}
+
+	const onChangeLink= (newContent) =>{
+		setAttributes( { Link: newContent } );
+	}
+
 	let AccentColor = {
 		color:Accent
 	}
@@ -68,7 +73,7 @@ export default function Edit(props) {
 
 
 	return (
-		<div { ...useBlockProps({style:BorderAccentColor}) }>
+		<a { ...useBlockProps({style:BorderAccentColor, href:Link}) }>
 
 			<InspectorControls>
 				<PanelBody>
@@ -93,6 +98,16 @@ export default function Edit(props) {
 						/>
 					</PanelRow>
 					<PanelRow>
+						<TextControl
+							label={ __( 'Link', 'basic-block' ) }
+							value={ Link }
+							help={ __(
+								'Link to social channel'
+							) }
+							onChange={onChangeLink}
+						/>
+					</PanelRow>
+					<PanelRow>
 						<ColorPicker
 							label={ __( 'Accent Block', 'basic-block' ) }
 							value={Accent}
@@ -105,9 +120,8 @@ export default function Edit(props) {
 				</PanelBody>
 			</InspectorControls>
 
-
 			<p class="handle">{Handle}</p>
 			<p class="platform"><span {...AccentColoring}>on</span>{Platform}</p>
-		</div>
+		</a>
 	);
 }
