@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,10 +29,22 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit(props) {
+
+	const {
+		attributes:{MailTo, MailFrom, Subject, Message},
+		setAttributes,
+		classNames
+	} = props
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Contact – hello from the editor!', 'contact' ) }
-		</p>
+		<form>
+			<label>Email</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email address"></input>
+			<label>Subject</label>
+			<input type="text" id="subject" name="subject" placeholder="Enter the subject of your message"></input>
+			<label>Message</label>
+			<textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your message here"></textarea>
+		</form>
 	);
 }

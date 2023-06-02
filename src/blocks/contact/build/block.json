@@ -10,6 +10,20 @@
   "supports": {
     "html": false
   },
+  "attributes": {
+    "Email": {
+      "type": "string",
+      "default": "e@mail.com"
+    },
+    "Subject": {
+      "type": "string",
+      "default": "message from site"
+    },
+    "Message": {
+      "type": "string",
+      "default": "oh hey looks like someone didn't write a message tsk tsk"
+    }
+  },
   "textdomain": "contact",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

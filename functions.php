@@ -25,8 +25,7 @@ function register_blocks()
     register_block_type( dirname(__FILE__) . '/src/blocks/spinWheel/build/block.json' );
 
     register_block_type( dirname(__FILE__) . '/src/blocks/skills/build/block.json' );
-
-    add_theme_support ('align-wide');
+    register_block_type( dirname(__FILE__) . '/src/blocks/Contact/build/block.json' );
 
 }
 add_action('init', 'register_blocks');
