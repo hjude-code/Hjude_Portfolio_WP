@@ -6,230 +6,66 @@ S-Mobile
 ====
 ====*/
 
+/*--
+--S-Nav info
+--
+*/
+
 .wp-block-create-block-sidebarnav{
-	position: fixed !important;
-	top:0px;
-	right: 0px;
+	position: fixed;
+	pointer-events: none;
+	inset: 0;
+	z-index: 10000;
+}
+
+.wp-block-create-block-sidebarnav #navInfo{
+	position: fixed;
 	inset: 0 0 auto 0;
-	margin-top: 0px !important;
-	z-index: 100;
+	padding: 1rem;
 }
 
-/*--
---S-Navigation menu
---
-*/
-.navLinks{
-	display: none !important;
-}
-
-/*--
---S-Name + tagline
---
-*/
-#navName{
+.wp-block-create-block-sidebarnav #navInfo #navName{
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem 1rem 0rem 1rem;
 }
 
-#navName h1{
-	margin:0 !important;
-	font-family:'Silverknife V0.2';
-	font-style: italic;
-	font-weight: 700;
-	font-size: 2rem;
+.wp-block-create-block-sidebarnav #navInfo #navName h1{
+	font-size: 1.75rem;
+	margin: 0px;
 }
-#logoBox{
-	height: 1.5em !important;
+
+.wp-block-create-block-sidebarnav #navInfo svg{
+	height: 1.5rem;
 }
 
 
-#navTagline{
-	padding:0 1rem;	
-	overflow: hidden;	
+
+.wp-block-create-block-sidebarnav #navTagline .lastName{
+	display: none;
 }
 
-#navTagline .lastName{
-	display: none;	
-}
-
-#navTagline h2{
-	margin:0 !important;
+.wp-block-create-block-sidebarnav #navTagline h2{
 	font-size: 1rem;
-	position:relative;
-	top:0em;
-	--frst:0.3s ease-in-out;
-	--scnd:0.5s ease-in-out;
-	transition: var(--scnd);
-	
+	margin: 0px;
+	font-family:'IBM plex mono';
+}
+.wp-block-create-block-sidebarnav #navTagline h2:nth-child(3){
+	text-align: right;
 }
 
 
-@media(max-width:768px) {
+/*--
+--S-NaV Menu
+--
+*/
 
-	#navName{
-		position: relative;
-	}
-	#navName *{
-		position: relative;;
-	}
-	.SCRL #navName{
-		padding: 1rem !important;
-	}
-	#navName::before{
-		content:'';
-		display: block;
-		position:absolute;
-		inset: 0;
-		background-color: #141514;
-		z-index:0;
-	}
-
-
-
-	.SCRL #navTagline h2{
-		top:-5em;
-		--frst:0.5s ease-in-out;
-		--scnd:0.3s ease-in-out;
-		transition: var(--frst);
-	}
-	#navTagline h2:first-child{
-		text-align: left !important;
-		transition:var(--scnd);
-	}
-
-	#navTagline h2:last-child{
-		text-align: right !important;
-		transition:var(--frst);
-	}
-
-
+.wp-block-create-block-sidebarnav .navLinks{
+	position: fixed;
+	inset: auto 0 0 0;
+	pointer-events: all;
 }
-
-/*====
-====
-====
-S-768 breakpoint
-====
-====
-====*/
-@media(min-width:768px) {
-	
-	.wp-block-create-block-sidebarnav{
-		display: flex;
-		justify-content: space-between;
-		font-size: 0.75rem;
-		align-items: center;
-		padding: 1rem 2rem !important;
-	}
-	.wp-block-create-block-sidebarnav::before{
-		content:'';
-		display: block;
-		position:absolute;
-		inset: 0;
-		transform: translateY(-100%);
-		background-color: #141514;
-		transition: transform 0.5s ease-in-out;
-	}
-	.SCRL .wp-block-create-block-sidebarnav::before{
-		transform: translateY(-0%);
-	}
-
-	/*--
-	--S-Navigation menu
-	--
-	*/
-	.navLinks{
-		display: block !important;
-		font-size: 1rem;
-	}
-	.navLinks .wp-block-navigation-item{
-		font-weight: bold;
-	}
-	.navLinks .wp-block-navigation-item:hover > a{
-		font-weight: bold;
-		font-style: italic;
-	}
-
-	/*--
-	--S-Name + Tagline
-	--
-	*/
-	#navInfo{
-		position: relative;	
-	}
-
-
-	#navName{
-		justify-content: end;
-		gap: 0.5em !important;
-		padding: 0 !important;
-		overflow: hidden;
-		position: relative;
-		transform: translateX(5.25em);
-		transition: transform 0.5s ease-in-out;
-	}
-	.SCRL #navName{
-		transform: translateX(0em);
-		padding: 0 !important;
-	}
-	#navName h1{
-		font-size: 3em !important;
-	}
-	#navName #logoBox{
-		height: 2em !important;
-	}
-	#navName .lastName{
-		transition: transform 0.25s ease-out;
-		transform: translateX(101%);
-	}
-	.SCRL #navName .lastName{
-		transform: translateX(0%);
-	}
-
-
-	#navTagline{
-		display:grid;
-		grid-template-columns:auto auto;
-		grid-template-rows: 1.25em 1.25em;
-		column-gap: 0.5em;
-		padding: 0 !important;
-		position: absolute;
-		transform-origin: top left;
-		transform:translateX(100%) rotate(90deg);
-		right: 0;
-		transition: transform 0.5s ease-in-out;
-	}
-
-	.SCRL #navTagline{
-		transform:translateX(150%) rotate(90deg);
-	}
-
-	#navTagline h2{
-		line-height: 1;
-		white-space: nowrap;
-	}
-
-	#navTagline .lastName{
-		display: block;
-		grid-area:1 / 1 / span 2 / span 1;
-		margin: 0 !important;
-		font-family:'Silverknife V0.2';
-		font-style: italic;
-		font-weight: 700;
-		font-size: 3em;
-		line-height: 0.75em;
-	}
-
-	
-}
-
-
-
-
-
 
 
 
