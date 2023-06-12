@@ -68,6 +68,12 @@ S-Mobile
 .wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container-open {
   background-color: black;
   margin: auto 1rem 1rem auto;
+  transition: margin 0.4s cubic-bezier(0.8, 0.11, 0.24, 0.94);
+}
+
+.wp-block-create-block-sidebarnav nav:has(.has-modal-open) .wp-block-navigation__responsive-container-open {
+  margin: auto 1rem 5rem auto;
+  transition: margin 0.4s cubic-bezier(0.07, 0.14, 0, 0.98);
 }
 
 .wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container {
@@ -79,9 +85,8 @@ S-Mobile
 .wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container.has-modal-open {
   animation: none !important;
   top: auto !important;
-  transition: transform 1s ease-out !important;
+  transition: transform 0.5s cubic-bezier(0.51, 1.02, 0.08, 0.97) !important;
   transform: translateY(0%);
-  transition: transform 1s ease-out !important;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
