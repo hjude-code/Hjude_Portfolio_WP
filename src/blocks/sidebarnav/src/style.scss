@@ -67,6 +67,29 @@ S-Mobile
 	pointer-events: all;
 }
 
+.wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container-open{
+	background-color: black;
+	margin:auto 1rem 1rem auto;
+}
+
+
+.wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container{
+	top: auto !important;
+	animation:none!important;
+	transform: translateY(100%);
+}
+.wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container.has-modal-open{
+	animation:none!important;
+	top: auto !important;
+	transition: transform 1s ease-out !important;
+	transform: translateY(0%);
+	transition: transform 1s ease-out !important;
+
+}
+
+
+
+
 
 
 
