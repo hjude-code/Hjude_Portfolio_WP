@@ -165,7 +165,20 @@ S-Desktop 768
 	z-index: 10000;
 	display: flex;
 	justify-content: space-between;
+	align-items:stretch;
 	margin: 0 !important;
+}
+
+.wp-block-create-block-sidebarnav::before{
+	content:'';
+	display: block;
+	position: absolute;
+	inset: 0 0 100% 0;
+	transition:inset 0.25s ease-in-out;
+	background-color: var(--wp--preset--color--black);
+}
+.SCRL .wp-block-create-block-sidebarnav::before{
+	inset: 0 0 0 0;
 }
 
 /*--
@@ -177,7 +190,76 @@ S-Desktop 768
 	position: relative;
 	inset: auto;
 	pointer-events: all;
+	width: auto;
 }
+.wp-block-create-block-sidebarnav #navInfo::before{
+	display: none;
+}
+
+.wp-block-create-block-sidebarnav #navInfo #navName{
+	justify-content: flex-end;
+	gap:0.5rem;
+
+}
+
+.wp-block-create-block-sidebarnav #navInfo #logoBox{
+	height: 3em;
+	width: 3em;
+	flex-shrink: 0;
+}
+
+.wp-block-create-block-sidebarnav #navInfo h1{
+	font-size: 3rem !important;
+	transition: font-size 0.25s ease-in-out;
+}
+.SCRL .wp-block-create-block-sidebarnav #navInfo h1{
+	font-size: 2rem !important;
+}
+.wp-block-create-block-sidebarnav #navInfo #navName .lastName{
+	width:0%;
+	overflow: hidden;
+	transition: width 0.5s ease-in-out;
+}
+
+
+.SCRL .wp-block-create-block-sidebarnav #navInfo #navName .lastName{
+	width:100%;
+}
+
+.wp-block-create-block-sidebarnav #navInfo #navTagline{
+	position: absolute;
+	left:100%;
+	top: calc(100% - 0.5rem);
+	padding: 1rem;
+	width: 100%;
+	transform-origin:top left;
+	transform:rotate(90deg);
+	padding-left:0;
+	display: grid;
+	transition: 0.35s ease-in-out;
+	grid-template-columns:auto auto;
+	grid-template-rows: 1fr 1fr;
+}
+.SCRL .wp-block-create-block-sidebarnav #navInfo #navTagline{
+	height: auto !important;
+	transform:rotate(90deg) translateY(-100%);
+}
+.wp-block-create-block-sidebarnav #navInfo #navTagline h2{
+	white-space: nowrap;
+	grid-column-start: 2;
+	text-align: left;
+}
+.SCRL .wp-block-create-block-sidebarnav #navInfo #navTagline h2{
+	transform: none;
+}
+.wp-block-create-block-sidebarnav #navInfo #navTagline .lastName{
+	display: block;
+	margin: 0;
+	font-size: 3rem;
+	grid-row: span 2;
+	line-height:1;
+}
+
 
 
 /*--
@@ -188,5 +270,21 @@ S-Desktop 768
 	position:static;
 	inset: auto;
 	pointer-events: all;
+	display: flex;
+	align-items: center;
+
 }
+
+.wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container{
+	transform: none;
+	padding: 1rem;
+}
+
+.wp-block-create-block-sidebarnav .wp-block-navigation-item__content{
+	font-family:'IBM Plex Mono';
+	font-weight: 700;
+	font-size:1rem;
+	text-transform: lowercase;
+}
+
 }
