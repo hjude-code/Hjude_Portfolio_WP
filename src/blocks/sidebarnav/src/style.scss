@@ -29,6 +29,8 @@ S-Mobile
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
+	z-index: 100;
 }
 
 .wp-block-create-block-sidebarnav #navInfo #navName h1{
@@ -40,17 +42,44 @@ S-Mobile
 	height: 1.5rem;
 }
 
-
+.wp-block-create-block-sidebarnav #navInfo::before{
+	content:'';
+	display: block;
+	z-index: 50;
+	position: absolute;
+	inset: 0% 0% 100% 0%;
+	transition: inset 0.25s ease-in;
+	background-color: rgba(20, 21, 20, 1);
+}
+.SCRL .wp-block-create-block-sidebarnav #navInfo::before{
+	inset: 0% 0% 0% 0%;
+}
 
 .wp-block-create-block-sidebarnav #navTagline .lastName{
 	display: none;
 }
 
+.wp-block-create-block-sidebarnav #navTagline{
+	transition: 0.25s ease-in-out;
+	height: 3.5em;
+}
+
+.SCRL .wp-block-create-block-sidebarnav #navTagline{
+	transform: translateY(-200%);
+	height: 0em;
+}
+
 .wp-block-create-block-sidebarnav #navTagline h2{
 	font-size: 1rem;
 	margin: 0px;
+	transition: transform 0.25s ease-in-out;
+	transform: translateY(0%);
 	font-family:'IBM plex mono';
 }
+.SCRL .wp-block-create-block-sidebarnav #navTagline h2{
+	transform: translateY(-120%);
+}
+
 .wp-block-create-block-sidebarnav #navTagline h2:nth-child(3){
 	text-align: right;
 }
@@ -111,6 +140,7 @@ S-Mobile
 	font-family:'IBM Plex Mono';
 	font-weight: 700;
 	font-size:1.5rem;
+	text-transform: lowercase;
 }
 
 
