@@ -76,9 +76,26 @@ S-Mobile
   transition: margin 0.4s cubic-bezier(0.07, 0.14, 0, 0.98);
 }
 
+.wp-block-create-block-sidebarnav button svg {
+  transition: transform 0.4s ease-in-out;
+  transform-origin: center;
+  transform: rotate(0deg);
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.wp-block-create-block-sidebarnav nav:has(.has-modal-open) button svg {
+  transition: transform 0.4s ease-in-out;
+  transform-origin: center;
+  transform: rotate(90deg);
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
 .wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container {
   top: auto !important;
   animation: none !important;
+  transform-origin: center;
   transform: translateY(100%);
 }
 
