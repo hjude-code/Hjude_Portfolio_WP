@@ -146,9 +146,47 @@ S-Mobile
 
 
 
+/*====
+====
+====
+S-Desktop 768
+====
+====
+====*/
+@media (min-width:768px){
 
 
 
 
+.wp-block-create-block-sidebarnav{
+	position: fixed;
+	pointer-events: none;
+	inset: 0 0 auto 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 !important;
+}
+
+/*--
+--S-Nav info
+--
+*/
+
+.wp-block-create-block-sidebarnav #navInfo{
+	position: relative;
+	inset: auto;
+	pointer-events: all;
+}
 
 
+/*--
+--S-NaV Menu
+--
+*/
+.wp-block-create-block-sidebarnav .navLinks{
+	position:static;
+	inset: auto;
+	pointer-events: all;
+}
+}
