@@ -270,6 +270,10 @@ S-Desktop 768
     font-size: 1rem;
     text-transform: lowercase;
   }
+  .wp-block-create-block-sidebarnav .wp-block-navigation-item__content:hover {
+    color: var(--wp--preset--color--red);
+    font-style: italic;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/
