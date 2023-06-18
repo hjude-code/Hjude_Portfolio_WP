@@ -3,3 +3,21 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+
+ .wp-block-create-block-sidebarnav{
+	background-color: var(--wp--preset--color--black);
+}
+
+.wp-block-create-block-sidebarnav #navInfo #navTagline{
+    transform:none !important;
+    position:static;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+} 
+
+.wp-block-create-block-sidebarnav #navInfo{
+    display: flex;
+    gap:1rem;
+}
