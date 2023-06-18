@@ -203,10 +203,16 @@ S-Desktop 768
 }
 
 .wp-block-create-block-sidebarnav #navInfo #logoBox{
-	height: 3em;
-	width: 3em;
+	--logoSize:3em;
+	transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+	height: var(--logoSize);
+	width: 3evar(--logoSize);
 	flex-shrink: 0;
 }
+.SCRL .wp-block-create-block-sidebarnav #navInfo #logoBox{
+	--logoSize:2em
+}
+
 
 .wp-block-create-block-sidebarnav #navInfo h1{
 	font-size: 3rem !important;
@@ -218,7 +224,7 @@ S-Desktop 768
 .wp-block-create-block-sidebarnav #navInfo #navName .lastName{
 	width:0%;
 	overflow: hidden;
-	transition: width 0.5s ease-in-out;
+	transition:width 0.5s ease-in-out, font-size 0.25s ease-in-out;
 }
 
 
