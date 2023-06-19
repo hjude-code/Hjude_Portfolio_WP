@@ -51,7 +51,9 @@ S-Mobile
 	transition: inset 0.25s ease-in;
 	background-color: rgba(20, 21, 20, 1);
 }
-.SCRL .wp-block-create-block-sidebarnav #navInfo::before{
+.SCRL .wp-block-create-block-sidebarnav #navInfo::before,
+.StandardNav.wp-block-create-block-sidebarnav #navInfo::before,
+{
 	inset: 0% 0% 0% 0%;
 }
 
@@ -64,7 +66,8 @@ S-Mobile
 	height: 3.5em;
 }
 
-.SCRL .wp-block-create-block-sidebarnav #navTagline{
+.SCRL .wp-block-create-block-sidebarnav #navTagline,
+.StandardNav.wp-block-create-block-sidebarnav #navTagline{
 	transform: translateY(-200%);
 	height: 0em;
 }
@@ -76,7 +79,8 @@ S-Mobile
 	transform: translateY(0%);
 	font-family:'IBM plex mono';
 }
-.SCRL .wp-block-create-block-sidebarnav #navTagline h2{
+.SCRL .wp-block-create-block-sidebarnav #navTagline h2,
+.StandardNav.wp-block-create-block-sidebarnav #navTagline h2{
 	transform: translateY(-120%);
 }
 
@@ -177,7 +181,8 @@ S-Desktop 768
 	transition:inset 0.25s ease-in-out;
 	background-color: var(--wp--preset--color--black);
 }
-.SCRL .wp-block-create-block-sidebarnav::before{
+.SCRL .wp-block-create-block-sidebarnav::before,
+.StandardNav.wp-block-create-block-sidebarnav::before{
 	inset: 0 0 0 0;
 }
 
@@ -210,7 +215,8 @@ S-Desktop 768
 	width: 3evar(--logoSize);
 	flex-shrink: 0;
 }
-.SCRL .wp-block-create-block-sidebarnav #navInfo #logoBox{
+.SCRL .wp-block-create-block-sidebarnav #navInfo #logoBox,
+.StandardNav.wp-block-create-block-sidebarnav #navInfo #logoBox{
 	--logoSize:2em
 }
 
@@ -219,7 +225,8 @@ S-Desktop 768
 	font-size: 3rem !important;
 	transition: font-size 0.25s ease-in-out;
 }
-.SCRL .wp-block-create-block-sidebarnav #navInfo h1{
+.SCRL .wp-block-create-block-sidebarnav #navInfo h1,
+.StandardNav.wp-block-create-block-sidebarnav #navInfo h1{
 	font-size: 2rem !important;
 }
 .wp-block-create-block-sidebarnav #navInfo #navName .lastName{
@@ -229,7 +236,8 @@ S-Desktop 768
 }
 
 
-.SCRL .wp-block-create-block-sidebarnav #navInfo #navName .lastName{
+.SCRL .wp-block-create-block-sidebarnav #navInfo #navName .lastName,
+.StandardNav.wp-block-create-block-sidebarnav #navInfo #navName .lastName{
 	width:100%;
 }
 
@@ -247,7 +255,8 @@ S-Desktop 768
 	grid-template-columns:auto auto;
 	grid-template-rows: 1fr 1fr;
 }
-.SCRL .wp-block-create-block-sidebarnav #navInfo #navTagline{
+.SCRL .wp-block-create-block-sidebarnav #navInfo #navTagline,
+.StandardNav.wp-block-create-block-sidebarnav #navInfo #navTagline{
 	height: auto !important;
 	transform:rotate(90deg) translateY(-100%);
 }
@@ -256,7 +265,8 @@ S-Desktop 768
 	grid-column-start: 2;
 	text-align: left;
 }
-.SCRL .wp-block-create-block-sidebarnav #navInfo #navTagline h2{
+.SCRL .wp-block-create-block-sidebarnav #navInfo #navTagline h2,
+.StandardNav.wp-block-create-block-sidebarnav #navInfo #navTagline h2{
 	transform: none;
 }
 .wp-block-create-block-sidebarnav #navInfo #navTagline .lastName{
@@ -282,7 +292,7 @@ S-Desktop 768
 
 }
 
-.wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container{
+.wp-block-create-block-sidebarnav .wp-block-navigation > ul{
 	transform: none;
 	padding: 1rem 2rem;
 }

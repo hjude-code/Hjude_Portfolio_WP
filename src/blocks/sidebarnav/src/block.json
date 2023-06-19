@@ -14,6 +14,26 @@
 			"background": true
 		}
 	},
+	"variations": [
+		{
+			"name": "Standard_Nav",
+			"title": "Standard Nav",
+			"isDefault": true,
+			"attributes": {
+				"className":"StandardNav"
+			}
+
+		},
+		{
+			"name": "Hero_Nav",
+			"title": "Hero Nav",
+			"isDefault": false,
+			"attributes": {
+				"className":"HeroNav"
+			}
+
+		}
+	],
 	"attributes": {
 		"firstName":{
 			"type":"string",
