@@ -7,7 +7,7 @@
  */
 ?>
 <!-- wp:create-block/sidebarnav {"className":"HeroNav"} -->
-<!-- wp:navigation {"ref":371,"textColor":"white","overlayMenu":"never","overlayBackgroundColor":"black","overlayTextColor":"white","layout":{"type":"flex","orientation":"horizontal","justifyContent":"left"},"style":{"spacing":{"blockGap":"1em"}}} /-->
+<!-- wp:navigation {"ref":371,"textColor":"white","icon":"menu","overlayBackgroundColor":"black","overlayTextColor":"white","layout":{"type":"flex","orientation":"horizontal","justifyContent":"left"},"style":{"spacing":{"blockGap":"1em"}}} /-->
 <!-- /wp:create-block/sidebarnav -->
 
 <!-- wp:create-block/messageheader {"greeting":"Dag, we gaan graag naar Nederlands! Lets do something dutch together!","backgroundColor":"Black","textColor":"white","fontSize":"medium"} -->
