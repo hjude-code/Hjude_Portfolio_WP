@@ -271,7 +271,7 @@ S-Desktop 768
     display: flex;
     align-items: center;
   }
-  .wp-block-create-block-sidebarnav .wp-block-navigation > ul {
+  .wp-block-create-block-sidebarnav .wp-block-navigation__responsive-container {
     transform: none;
     padding: 1rem 2rem;
   }

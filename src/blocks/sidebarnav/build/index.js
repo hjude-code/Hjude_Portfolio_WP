@@ -59,7 +59,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const NavTemplate = [['core/navigation', {
   textColor: 'white',
-  overlayMenu: 'never',
+  icon: 'menu',
+  overlayMenu: 'mobile',
   overlayBackgroundColor: 'black',
   overlayTextColor: 'white',
   layout: {

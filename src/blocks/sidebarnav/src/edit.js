@@ -42,7 +42,8 @@ import './editor.scss';
 const NavTemplate = [
 	['core/navigation', {
 		textColor:'white',
-		overlayMenu:'never',
+		icon:'menu',
+		overlayMenu:'mobile',
 		overlayBackgroundColor:'black',
 		overlayTextColor:'white',
 		layout:{
