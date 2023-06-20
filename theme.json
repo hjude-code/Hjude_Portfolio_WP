@@ -290,6 +290,9 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/cover": {
+				"css": ".is-sticky{\nposition:sticky;\ntop:0px;\n}"
+			},
 			"core/paragraph": {
 				"css": "max-width:600px;\nhyphens:auto;\ntext-align:justify;"
 			}
